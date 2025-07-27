@@ -8735,7 +8735,18 @@ var H0,
                     }
                     h = h.filter((p) => Mo(p.tags, f.tagFilter));
                 } else f.type == "ViewScheme" && (h = h.filter((p) => f.files.includes(p.id)));
-                r ? h.sort(() => Math.random() - 0.5) : h.sort((p, b) => (l === "created" ? new Date(b.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() - new Date(p.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : b.file.stat.mtime - p.file.stat.mtime)), e({ allFiles: o, allTags: u, curSchemeFiles: h });
+                r ? h.sort(() => Math.random() - 0.5) : h.sort((p, b) => (l === "created" 
+                    ? (
+                        b.file.name.match(/(\d{4})-(\d{2})-(\d{2})_(\d{2}).(\d{2}).(\d{2})/) 
+                        ? new Date(b.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() 
+                        : new Date(b.file.stat.ctime)
+                    ) - (
+                        p.file.name.match(/(\d{4})-(\d{2})-(\d{2})_(\d{2}).(\d{2}).(\d{2})/) 
+                        ? new Date(p.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() 
+                        : new Date(p.file.stat.ctime)
+                    )
+                    : b.file.stat.mtime - p.file.stat.mtime
+                )), e({ allFiles: o, allTags: u, curSchemeFiles: h });
             },
             updateDisplayFiles: (n) => {
                 let a = t().curScheme,
@@ -11870,7 +11881,11 @@ function Ks({ event: e, fileInfo: t, isPinned: n }) {
         },
         v = () => {
             b.addItem((T) => {
-                T.setTitle(`${O.t("general_create")}: ${new Date(new Date(t.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime()).toLocaleString()}`), T.setDisabled(!0);
+                let ctime = t.file.stat.ctime;
+                if (t.file.name.match(/(\d{4})-(\d{2})-(\d{2})_(\d{2}).(\d{2}).(\d{2})/)) {
+                    ctime = new Date(t.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime();
+                }
+                T.setTitle(`${O.t("general_create")}: ${new Date(ctime).toLocaleString()}`), T.setDisabled(!0);
             });
         },
         w = () => {
@@ -11970,7 +11985,7 @@ var zt = B(J()),
                     (0, zt.jsxs)("div", {
                         className: "card-note-header",
                         children: [
-                            (0, zt.jsxs)("div", { className: "card-note-time", children: [a ? `${O.t("general_pin")} \xB7 ` : "", o ? O.t("created_at") : O.t("updated_at"), " ", new Date(o ? new Date(e.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : e.file.stat.mtime).toLocaleString()] }),
+                            (0, zt.jsxs)("div", { className: "card-note-time", children: [a ? `${O.t("general_pin")} \xB7 ` : "", o ? O.t("created_at") : O.t("updated_at"), " ", new Date(o ? (e.file.name.match(/(\d{4})-(\d{2})-(\d{2})_(\d{2}).(\d{2}).(\d{2})/) ? new Date(e.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : e.file.stat.ctime) : e.file.stat.mtime).toLocaleString()] }),
                             f && (0, zt.jsx)("div", { className: "card-note-title", children: (0, zt.jsx)("h3", { children: f }) }),
                             u.length > 0 &&
                                 (0, zt.jsxs)("div", {
@@ -13472,7 +13487,11 @@ var to = B(J()),
     zO = (e, t) => {
         let n = e
             .map((a) => {
-                let l = new Date(t == "created" ? new Date(a.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : a.file.stat.mtime),
+                let ctime = a.file.stat.ctime;
+                if (a.file.name.match(/(\d{4})-(\d{2})-(\d{2})_(\d{2}).(\d{2}).(\d{2})/)) {
+                    ctime = new Date(a.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime();
+                }
+                let l = new Date(t == "created" ? ctime : a.file.stat.mtime),
                     r = l.getTimezoneOffset();
                 return l.setTime(l.getTime() - r * 60 * 1e3), l.toISOString().slice(0, 10);
             })
