@@ -8720,7 +8720,7 @@ var H0,
                     f = t().curScheme,
                     h = o;
                 if (f.type == "FilterScheme") {
-                    if (((h = h.filter(({ file: p }) => jm(l == "created" ? p.stat.ctime : p.stat.mtime, f.dateRange))), f.keyword.trim().length > 0)) {
+                    if (((h = h.filter(({ file: p }) => jm(l == "created" ? new Date(p.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : p.stat.mtime, f.dateRange))), f.keyword.trim().length > 0)) {
                         let p = f.keyword.trim().toLowerCase();
                         h = (
                             await Promise.all(
@@ -8735,7 +8735,7 @@ var H0,
                     }
                     h = h.filter((p) => Mo(p.tags, f.tagFilter));
                 } else f.type == "ViewScheme" && (h = h.filter((p) => f.files.includes(p.id)));
-                r ? h.sort(() => Math.random() - 0.5) : h.sort((p, b) => (l === "created" ? b.file.stat.ctime - p.file.stat.ctime : b.file.stat.mtime - p.file.stat.mtime)), e({ allFiles: o, allTags: u, curSchemeFiles: h });
+                r ? h.sort(() => Math.random() - 0.5) : h.sort((p, b) => (l === "created" ? new Date(b.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() - new Date(p.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : b.file.stat.mtime - p.file.stat.mtime)), e({ allFiles: o, allTags: u, curSchemeFiles: h });
             },
             updateDisplayFiles: (n) => {
                 let a = t().curScheme,
@@ -11870,7 +11870,7 @@ function Ks({ event: e, fileInfo: t, isPinned: n }) {
         },
         v = () => {
             b.addItem((T) => {
-                T.setTitle(`${O.t("general_create")}: ${new Date(t.file.stat.ctime).toLocaleString()}`), T.setDisabled(!0);
+                T.setTitle(`${O.t("general_create")}: ${new Date(new Date(t.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime()).toLocaleString()}`), T.setDisabled(!0);
             });
         },
         w = () => {
@@ -11970,7 +11970,7 @@ var zt = B(J()),
                     (0, zt.jsxs)("div", {
                         className: "card-note-header",
                         children: [
-                            (0, zt.jsxs)("div", { className: "card-note-time", children: [a ? `${O.t("general_pin")} \xB7 ` : "", o ? O.t("created_at") : O.t("updated_at"), " ", new Date(o ? e.file.stat.ctime : e.file.stat.mtime).toLocaleString()] }),
+                            (0, zt.jsxs)("div", { className: "card-note-time", children: [a ? `${O.t("general_pin")} \xB7 ` : "", o ? O.t("created_at") : O.t("updated_at"), " ", new Date(o ? new Date(e.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : e.file.stat.mtime).toLocaleString()] }),
                             f && (0, zt.jsx)("div", { className: "card-note-title", children: (0, zt.jsx)("h3", { children: f }) }),
                             u.length > 0 &&
                                 (0, zt.jsxs)("div", {
@@ -12081,7 +12081,7 @@ var ft = B(J()),
                     (0, ft.jsxs)("div", {
                         className: "card-note-header",
                         children: [
-                            (0, ft.jsxs)("div", { className: "card-note-time", children: [a ? `${O.t("general_pin")} \xB7 ` : "", o ? O.t("created_at") : O.t("updated_at"), " ", new Date(o ? e.file.stat.ctime : e.file.stat.mtime).toLocaleString()] }),
+                            (0, ft.jsxs)("div", { className: "card-note-time", children: [a ? `${O.t("general_pin")} \xB7 ` : "", o ? O.t("created_at") : O.t("updated_at"), " ", new Date(o ? new Date(e.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : e.file.stat.mtime).toLocaleString()] }),
                             S && (0, ft.jsx)("div", { className: "card-note-title", children: (0, ft.jsx)("h3", { children: S }) }),
                             u.length > 0 &&
                                 (0, ft.jsxs)("div", {
@@ -13471,9 +13471,8 @@ var to = B(J()),
     },
     zO = (e, t) => {
         let n = e
-            .map((a) => a.file.stat)
             .map((a) => {
-                let l = new Date(t == "created" ? a.ctime : a.mtime),
+                let l = new Date(t == "created" ? new Date(a.file.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime() : a.file.stat.mtime),
                     r = l.getTimezoneOffset();
                 return l.setTime(l.getTime() - r * 60 * 1e3), l.toISOString().slice(0, 10);
             })
@@ -14271,7 +14270,7 @@ var fS = require("obsidian"),
                 e,
                 (a) => {
                     if (a.id !== void 0) return;
-                    let l = Ph(e.stat.ctime, n);
+                    let l = Ph(new Date(e.name.split("_").slice(0, 2).join(" ").replace(/\./g, ":")).getTime(), n);
                     a.id = l;
                 },
                 { mtime: e.stat.mtime }
