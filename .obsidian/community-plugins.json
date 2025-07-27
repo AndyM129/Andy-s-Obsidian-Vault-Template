@@ -16,5 +16,7 @@
   "obsidian-linter",
   "pkmer",
   "templater-obsidian",
-  "obsidian-trash-explorer"
+  "obsidian-trash-explorer",
+  "callout-manager",
+  "obsidian-list-callouts"
 ]
