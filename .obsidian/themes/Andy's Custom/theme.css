@@ -1,0 +1,216 @@
+body {
+    --table-header-weight: var(--bold-weight);
+    --table-header-color: var(--text-normal);
+
+    --h1-size: 2.2em;
+    --h2-size: 1.75em;
+    --h3-size: 1.4em;
+    --h4-size: 1.2em;
+    --h5-size: 1em;
+    --h6-size: 1em;
+
+    --cus-inline-code-text: var(--link-external-color);
+    --cus-table-header: var(--code-background);
+    --cus-table-gap-tr: var(--code-background);
+}
+
+/* blockquote BEGIN*/
+.markdown-rendered blockquote {
+    padding: var(--size-4-2) var(--size-4-3);
+    background-color: hsla(var(--interactive-accent-hsl), 0.1);
+    border-left: 4px solid hsl(var(--interactive-accent-hsl));
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before {
+    border-left: 4px solid hsl(var(--interactive-accent-hsl));
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+    background-color: hsla(var(--interactive-accent-hsl), 0.1);
+}
+/* blockquote END*/
+
+/* code block BEGIN*/
+.markdown-source-view.mod-cm6 .code-block-flair:hover,
+.markdown-rendered button.copy-code-button:hover {
+    background-color: hsla(var(--interactive-accent-hsl), 0.1);
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.markdown-rendered p code,
+.markdown-rendered li code {
+    color: var(--cus-inline-code-text);
+    border: 1px dotted var(--cus-inline-code-text);
+}
+
+.markdown-rendered pre {
+    border: 1px solid var(--cus-code-block-border);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+    border-top: 1px solid var(--cus-code-block-border);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    border-bottom: 1px solid var(--cus-code-block-border);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+    border-left: 1px solid var(--cus-code-block-border);
+    border-right: 1px solid var(--cus-code-block-border);
+}
+/* code block END*/
+
+/* table BEGIN*/
+table thead {
+    background-color: var(--cus-table-header);
+    font-weight: bold;
+    border-bottom: 2px solid var(--list-marker-color);
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: var(--cus-table-gap-tr);
+}
+/* table END*/
+
+/*Header BEGIN*/
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+    position: relative;
+}
+
+.markdown-preview-view h1:hover::before,
+.HyperMD-header .cm-header-1:hover::before {
+    content: "h1";
+    position: absolute;
+    font-size: 10px;
+    color: rgb(221 221 221);
+    font-weight: 400;
+    width: auto;
+    left: -19px;
+    border: 1px solid;
+    padding: 0px 2px;
+    border-radius: 3px;
+    bottom: 8px;
+    z-index: 999999;
+}
+
+.markdown-preview-view h2:hover::before,
+.HyperMD-header .cm-header-2:hover::before {
+    content: "h2";
+    position: absolute;
+    font-size: 10px;
+    color: rgb(221 221 221);
+    font-weight: 400;
+    width: auto;
+    margin: 0;
+    left: -20px;
+    border: 1px solid;
+    padding: 0px 2px;
+    border-radius: 3px;
+    bottom: 7px;
+    z-index: 999999;
+}
+
+.markdown-preview-view h3:hover::before,
+.HyperMD-header .cm-header-3:hover::before {
+    content: "h3";
+    position: absolute;
+    font-size: 10px;
+    color: rgb(221 221 221);
+    font-weight: 400;
+    width: auto;
+    margin: 0;
+    left: -20px;
+    border: 1px solid;
+    padding: 0px 2px;
+    border-radius: 3px;
+    bottom: 6px;
+    z-index: 999999;
+}
+
+.markdown-preview-view h4:hover::before,
+.HyperMD-header .cm-header-4:hover::before {
+    content: "h4";
+    position: absolute;
+    font-size: 10px;
+    color: rgb(221 221 221);
+    font-weight: 400;
+    width: auto;
+    margin: 0;
+    left: -21px;
+    border: 1px solid;
+    padding: 0px 2px;
+    border-radius: 3px;
+    bottom: 6px;
+    z-index: 999999;
+}
+
+.markdown-preview-view h5:hover::before,
+.HyperMD-header .cm-header-5:hover::before {
+    content: "h5";
+    position: absolute;
+    font-size: 10px;
+    color: rgb(221 221 221);
+    font-weight: 400;
+    width: auto;
+    margin: 0;
+    left: -20px;
+    border: 1px solid;
+    padding: 0px 2px;
+    border-radius: 3px;
+    bottom: 4px;
+    z-index: 999999;
+}
+
+.markdown-preview-view h6:hover::before,
+.HyperMD-header .cm-header-6:hover::before {
+    content: "h6";
+    position: absolute;
+    font-size: 10px;
+    color: rgb(221 221 221);
+    font-weight: 400;
+    width: auto;
+    margin: 0;
+    left: -20px;
+    border: 1px solid;
+    padding: 0px 2px;
+    border-radius: 3px;
+    bottom: 4px;
+    z-index: 999999;
+}
+/*Header END*/
+
+/* header border line in preview BEGIN*/
+.markdown-preview-view h1,
+.markdown-rendered h1,
+.HyperMD-header-1 {
+    border-bottom: 1.5px dashed var(--color-base-35);
+}
+
+.markdown-preview-view h2,
+.markdown-rendered h2,
+.HyperMD-header-2 {
+    border-bottom: 1.5px dashed var(--color-base-25);
+}
+/* header border line in preview END*/
+
+/* horizontal line in preview BEGIN*/
+hr {
+    --andy-hr-size: 3px;
+    border-width: var(--andy-hr-size);
+}
+
+.markdown-preview-view hr {
+    border-width: var(--andy-hr-size);
+}
+
+.markdown-rendered hr {
+    border-width: var(--andy-hr-size);
+}
+/* horizontal line in preview END*/

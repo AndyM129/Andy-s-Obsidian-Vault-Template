@@ -1,0 +1,11 @@
+{
+  "showDateButtons": false,
+  "showTimeButtons": false,
+  "showAutomatically": true,
+  "autoApplyEdits": true,
+  "immediatelyShowCalendar": false,
+  "autofocus": false,
+  "focusOnArrowDown": false,
+  "insertIn24HourFormat": false,
+  "selectDateText": false
+}

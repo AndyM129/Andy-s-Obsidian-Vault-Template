@@ -1,0 +1,9 @@
+{
+  "folderNoteHide": true,
+  "folderNoteType": "inside",
+  "folderNoteName": "_about_",
+  "folderNoteKey": "ctrl",
+  "folderNoteAutoRename": true,
+  "folderDelete2Note": false,
+  "folderNoteStrInit": "---\ntitle: {{FOLDER_NAME}} \ntags: []\naliases: []\nctime: \nmtime: \nobsidianUIMode: preview\n---\n\n \n```ccard\ntype: folder_brief_live\nstyle: strip\nnoteOnly: true\n```\n"
+}

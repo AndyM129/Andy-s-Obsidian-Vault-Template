@@ -1,0 +1,30 @@
+{
+  "openNewTab": false,
+  "openFileIn": "newTab",
+  "deleteCommandWhenFileIsDeleted": true,
+  "updateCommandsOnRename": true,
+  "commands": [
+    {
+      "id": "8f3ec289-7e28-4f69-a572-03c22ff6b225",
+      "name": "My Moments",
+      "filePath": "Moments/Moments.md",
+      "openFileIn": "newTab",
+      "command": {
+        "id": "open-files-with-commands:8f3ec289-7e28-4f69-a572-03c22ff6b225",
+        "name": "Open files with commands: My Moments"
+      }
+    }
+  ],
+  "customVariables": [
+    {
+      "name": "date",
+      "value": "{{d:YYYY-MM-DD}}",
+      "type": "string"
+    },
+    {
+      "name": "time",
+      "value": "{{d:HH:mm:ss}}",
+      "type": "string"
+    }
+  ]
+}

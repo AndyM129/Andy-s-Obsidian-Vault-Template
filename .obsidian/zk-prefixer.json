@@ -1,0 +1,5 @@
+{
+  "folder": "Moments",
+  "template": "Preferences/Templater/Templates/Moments.tpl",
+  "format": "YYYY年/YYYY-MM-DD_HH.mm.ss_ddd"
+}

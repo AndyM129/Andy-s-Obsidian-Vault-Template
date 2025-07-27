@@ -1,1 +1,8 @@
-{}
+{
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./attachments",
+  "userIgnoreFilters": [
+    "/(.[aA][sS][sS][eE][tT][sS]$)|(.[aA][sS][sS][eE][tT][sS]/)/"
+  ]
+}

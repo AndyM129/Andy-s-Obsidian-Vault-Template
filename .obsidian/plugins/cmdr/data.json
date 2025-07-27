@@ -1,0 +1,83 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [
+    {
+      "id": "editor:save-file",
+      "icon": "save",
+      "name": "保存当前文件",
+      "mode": "any"
+    }
+  ],
+  "leftRibbon": [
+    {
+      "id": "banyan:open-dashboard",
+      "icon": "aperture",
+      "name": "我的动态",
+      "mode": "any"
+    },
+    {
+      "id": "zk-prefixer",
+      "icon": "brush",
+      "name": "发表动态",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "editor:save-file",
+      "icon": "save",
+      "name": "保存当前文件",
+      "mode": "mobile"
+    },
+    {
+      "id": "remotely-save:start-sync",
+      "icon": "remotely-save-sync-wait",
+      "name": "Remotely Save: 开始同步（start sync）",
+      "mode": "mobile"
+    },
+    {
+      "id": "workspace:close",
+      "icon": "lucide-x",
+      "name": "关闭当前标签页",
+      "mode": "mobile"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [
+      "editing-toolbar"
+    ],
+    "leftRibbon": [
+      "创建时间戳笔记",
+      "打开/创建今天的日记",
+      "新建白板",
+      "切换附件文件夹的“显示/隐藏”",
+      "查看关系图谱",
+      "打开命令面板",
+      "Obsidian Assistant",
+      "随机打开笔记 - 随机回顾",
+      "插入模板",
+      "添加卡片笔记",
+      "打开笔记面板",
+      "Open trash explorer"
+    ]
+  },
+  "spacing": "8",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

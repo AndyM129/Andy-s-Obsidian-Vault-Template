@@ -1,0 +1,82 @@
+{
+  "settingsVersion": 3,
+  "cardsDirectory": "Moments",
+  "sortType": "created",
+  "openWhenStartObsidian": false,
+  "titleDisplayMode": "propertyOrNone",
+  "filterSchemes": [
+    {
+      "id": -1,
+      "name": "所有笔记",
+      "tagFilter": {
+        "or": [
+          []
+        ],
+        "not": [],
+        "noTag": "unlimited"
+      },
+      "dateRange": {
+        "from": "",
+        "to": ""
+      },
+      "keyword": "",
+      "pinned": [],
+      "parentId": null,
+      "type": "FilterScheme"
+    },
+    {
+      "id": 1,
+      "name": "Moments",
+      "tagFilter": {
+        "or": [
+          []
+        ],
+        "not": [],
+        "noTag": "exclude"
+      },
+      "dateRange": {
+        "from": "",
+        "to": ""
+      },
+      "keyword": "",
+      "pinned": [],
+      "parentId": null,
+      "type": "FilterScheme"
+    }
+  ],
+  "viewSchemes": [
+    {
+      "id": 1,
+      "name": "测试1",
+      "files": [],
+      "pinned": [],
+      "type": "ViewScheme"
+    }
+  ],
+  "randomNoteTagFilter": {
+    "or": [
+      []
+    ],
+    "not": [],
+    "noTag": "unlimited"
+  },
+  "cardsColumns": 1,
+  "firstUseDate": "2025/7/26",
+  "randomBrowse": false,
+  "randomReviewFilters": [
+    {
+      "id": 0,
+      "name": "随机回顾",
+      "tagFilter": {
+        "or": [
+          []
+        ],
+        "not": [],
+        "noTag": "unlimited"
+      }
+    }
+  ],
+  "showBacklinksInCardNote": true,
+  "useCardNote2": false,
+  "useZkPrefixerFormat": false
+}
