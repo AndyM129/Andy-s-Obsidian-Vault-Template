@@ -1,7 +1,7 @@
 ---
 title: 
 tags:
-  - Moments
+  - Daily
 aliases: 
 ctime: 
 mtime:

@@ -16,11 +16,15 @@
   "folder_templates": [
     {
       "folder": "Moments",
-      "template": "Preferences/Templates/Moments.tpl.md"
+      "template": "Preferences/Templater/Templates/Moments.tpl.md"
     },
     {
       "folder": "Moments/2025年",
-      "template": "Preferences/Templates/Moments.tpl.md"
+      "template": "Preferences/Templater/Templates/Moments.tpl.md"
+    },
+    {
+      "folder": "Daily",
+      "template": "Preferences/Templater/Templates/Daily.tpl.md"
     }
   ],
   "enable_file_templates": false,
