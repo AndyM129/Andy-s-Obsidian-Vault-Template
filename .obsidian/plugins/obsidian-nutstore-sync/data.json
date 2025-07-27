@@ -1,0 +1,53 @@
+{
+  "account": "",
+  "credential": "",
+  "remoteDir": "/Andy's Obsidian - Template/",
+  "remoteCacheDir": "",
+  "useGitStyle": true,
+  "conflictStrategy": "diff-match-patch",
+  "oauthResponseText": "",
+  "loginMode": "sso",
+  "confirmBeforeSync": true,
+  "syncMode": "loose",
+  "filterRules": {
+    "exclusionRules": [
+      {
+        "expr": ".git",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": ".DS_Store",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": ".trash",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": ".obsidian",
+        "options": {
+          "caseSensitive": false
+        }
+      }
+    ],
+    "inclusionRules": [
+      {
+        "expr": ".obsidian/bookmarks.json",
+        "options": {
+          "caseSensitive": false
+        }
+      }
+    ]
+  },
+  "skipLargeFiles": {
+    "maxSize": "50 MB"
+  },
+  "realtimeSync": true,
+  "startupSyncDelaySeconds": 3
+}

@@ -179,18 +179,61 @@
       "hide-folders:Show hidden folders": false,
       "pkmer:Open Pkmer Market": false,
       "obsidian-trash-explorer:Open trash explorer": false,
-      "callout-manager:Insert Callout": false
+      "callout-manager:Insert Callout": false,
+      "obsidian42-brat:BRAT": false,
+      "nutstore-sync:开始同步": false,
+      "nutstore-sync:停止同步": false
     }
   },
-  "active": "473771d8665cddb0",
+  "floating": {
+    "id": "2813d799aa8348d0",
+    "type": "floating",
+    "children": [
+      {
+        "id": "4ef28f80efef68a1",
+        "type": "window",
+        "children": [
+          {
+            "id": "93680f10cbaad7e0",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "9c97aed1d42e67af",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://help.jianguoyun.com/?p=2064",
+                    "title": "坚果云第三方应用授权WebDAV开启方法 | 坚果云帮助中心",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "坚果云第三方应用授权WebDAV开启方法 | 坚果云帮助中心"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 38,
+        "width": 864,
+        "height": 1079,
+        "maximize": false,
+        "zoom": -0.5
+      }
+    ]
+  },
+  "active": "342b459c468135ee",
   "lastOpenFiles": [
+    "Moments/2025年/2025-07-27_12.53.28_周日.md",
+    "Moments/2025年/2025-07-27_14.49.30_周日.md",
     "Moments/2025年/2025-07-27_12.51.24_周日.md",
     "Daily/Daily.md",
     "Daily/2025-07-27_周日.md",
     "Daily/2025-07-26_周六.md",
     "Daily/2025-07-25_周五.md",
     "Daily/2025-07-24_周四.md",
-    "Moments/2025年/2025-07-27_12.53.28_周日.md",
     "Moments/2025年/2025-07-27_13.09.38_周日.md",
     "Moments/2025年/2025-07-27_13.10.50_周日.md",
     "Preferences/Templates/Moments.tpl.md",
