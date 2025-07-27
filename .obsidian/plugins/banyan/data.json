@@ -29,7 +29,9 @@
       "name": "Moments",
       "tagFilter": {
         "or": [
-          []
+          [
+            "Moments"
+          ]
         ],
         "not": [],
         "noTag": "exclude"
