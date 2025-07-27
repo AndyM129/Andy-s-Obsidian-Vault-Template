@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "e63f6bbf2913f2aa",
+        "id": "2f9dde2589f10113",
         "type": "tabs",
-        "dimension": 62.54851228978008,
+        "dimension": 58.22622107969152,
         "children": [
           {
-            "id": "342b459c468135ee",
+            "id": "e5b8aa37a51adae6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -26,12 +26,12 @@
         ]
       },
       {
-        "id": "dae47f857ab25903",
+        "id": "f8d5b359f4064256",
         "type": "tabs",
-        "dimension": 37.45148771021992,
+        "dimension": 41.77377892030849,
         "children": [
           {
-            "id": "473771d8665cddb0",
+            "id": "9ab3d27a943c19e8",
             "type": "leaf",
             "state": {
               "type": "dashboard-view",
@@ -99,7 +99,7 @@
       {
         "id": "4b7d7c289da55ca5",
         "type": "tabs",
-        "dimension": 28.333333333333332,
+        "dimension": 28.33333333333333,
         "children": [
           {
             "id": "8e3907d17dfcb433",
@@ -115,7 +115,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5024719238281
+    "width": 293.5024719238281
   },
   "right": {
     "id": "75bce03e4525b949",
@@ -185,50 +185,14 @@
       "nutstore-sync:停止同步": false
     }
   },
-  "floating": {
-    "id": "2813d799aa8348d0",
-    "type": "floating",
-    "children": [
-      {
-        "id": "4ef28f80efef68a1",
-        "type": "window",
-        "children": [
-          {
-            "id": "93680f10cbaad7e0",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "9c97aed1d42e67af",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://help.jianguoyun.com/?p=2064",
-                    "title": "坚果云第三方应用授权WebDAV开启方法 | 坚果云帮助中心",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "坚果云第三方应用授权WebDAV开启方法 | 坚果云帮助中心"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 38,
-        "width": 864,
-        "height": 1079,
-        "maximize": false,
-        "zoom": -0.5
-      }
-    ]
-  },
-  "active": "342b459c468135ee",
+  "active": "e5b8aa37a51adae6",
   "lastOpenFiles": [
+    "Moments/2025年/2025年.md",
+    "Moments/2025年/2025-07-27_12.51.24_周日.md",
     "Moments/2025年/2025-07-27_12.53.28_周日.md",
     "Moments/2025年/2025-07-27_14.49.30_周日.md",
-    "Moments/2025年/2025-07-27_12.51.24_周日.md",
+    "Moments/2025年/2025-07-27_20.20.31_周日.md",
+    "Moments/2025年/2020-07-27_19.27.58_周日：测试一下.md",
     "Daily/Daily.md",
     "Daily/2025-07-27_周日.md",
     "Daily/2025-07-26_周六.md",
